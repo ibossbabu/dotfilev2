@@ -12,8 +12,9 @@ return {
       })
       require('mini.icons').setup()
       require('mini.ai').setup()
-      require('mini.splitjoin').setup()
-      require('mini.statusline').setup({
+      require('mini.git').setup()
+      require('mini.statusline').setup()
+      require('mini.splitjoin').setup({
         mappings = { toggle = 'gS', split = '', join = '', },
       })
       require('mini.hipatterns').setup({
