@@ -16,6 +16,8 @@ vim.opt.smartindent = true
 vim.opt.cursorline = true
 vim.opt.splitbelow = true
 
+vim.keymap.set('t', 'jk', '<C-\\><C-n>', { noremap = true, silent = true })
+
 function OpenTerm()
   vim.cmd('10split')
   vim.cmd('lcd %:p:h')
