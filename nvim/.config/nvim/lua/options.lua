@@ -22,6 +22,7 @@ function OpenTerm()
   vim.cmd('10split')
   vim.cmd('lcd %:p:h')
   vim.cmd('term')
+  vim.api.nvim_feedkeys('i', 'n', false)
 end
 
 vim.api.nvim_set_keymap('n', '<Leader>th', ':lua OpenTerm()<CR>', { noremap = true, silent = true })
