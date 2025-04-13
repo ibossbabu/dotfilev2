@@ -14,3 +14,12 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.smartindent = true
 vim.opt.cursorline = true
+vim.opt.splitbelow = true
+
+function OpenTerm()
+  vim.cmd('10split')
+  vim.cmd('lcd %:p:h')
+  vim.cmd('term')
+end
+
+vim.api.nvim_set_keymap('n', '<Leader>th', ':lua OpenTerm()<CR>', { noremap = true, silent = true })
