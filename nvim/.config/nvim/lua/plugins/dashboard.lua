@@ -47,7 +47,7 @@ return {
           {
             icon = "  ",
             desc = "Open Nvim config                        ",
-            action = "FzfLua files cwd=~/.config/nvim",
+            action = 'FzfLua files cwd=' .. vim.fn.stdpath('config'),
             key = "o",
           },
           {
