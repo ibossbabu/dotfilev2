@@ -1,20 +1,11 @@
 -- LSP Setup
-
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup("UserLspConfig", {}),
   callback = function(args)
-    --    local bufnr = args.buf
+    -- Lsp-native auto-formatting on save
     local c = vim.lsp.get_client_by_id(args.data.client_id)
     local opts = { buffer = args.buf, silent = true }
-    local supported_filetypes = { "lua", "go" }
-    --    vim.cmd [[set completeopt+=menuone,noselect,popup]]
-    --   if c:supports_method('textDocument/completion') then
-    --     local chars = {}; for i = 32, 126 do table.insert(chars, string.char(i)) end
-    --     c.server_capabilities.completionProvider.triggerCharacters = chars
-    --     vim.lsp.completion.enable(true, c.id, bufnr, {
-    --        autotrigger = true,
-    --     })
-    --   end
+    local supported_filetypes = { "lua", "go", "c", "cpp" }
 
     if not c:supports_method('textDocument/willSaveWaitUntil')
         and c:supports_method('textDocument/formatting')
@@ -35,14 +26,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
       vim.tbl_deep_extend("force", opts, { desc = "LSP Goto Definition" }))
     vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end,
       vim.tbl_deep_extend("force", opts, { desc = "LSP Hover" }))
-    vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end,
-      vim.tbl_deep_extend("force", opts, { desc = "LSP Workspace Symbol" }))
     vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.setloclist() end,
       vim.tbl_deep_extend("force", opts, { desc = "LSP Show Diagnostics" }))
-    --    vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end,
-    --      vim.tbl_deep_extend("force", opts, { desc = "Next Diagnostic" }))
-    --    vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end,
-    --      vim.tbl_deep_extend("force", opts, { desc = "Previous Diagnostic" }))
     vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end,
       vim.tbl_deep_extend("force", opts, { desc = "LSP Code Action" }))
     vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end,
@@ -62,10 +47,7 @@ local function jumpWithVirtLineDiags(jumpCount)
   vim.diagnostic.jump { count = jumpCount }
 
   local initialVirtTextConf = vim.diagnostic.config().virtual_text
-  vim.diagnostic.config {
-    virtual_text = false,
-    virtual_lines = { current_line = true },
-  }
+  vim.diagnostic.config { virtual_text = false, virtual_lines = { current_line = true }, }
 
   vim.defer_fn(function() -- deferred to not trigger by jump itself
     vim.api.nvim_create_autocmd("CursorMoved", {
@@ -78,6 +60,9 @@ local function jumpWithVirtLineDiags(jumpCount)
     })
   end, 1)
 end
--- Keymaps for jumping to diagnostics with virtual lines
-vim.keymap.set("n", "[d", function() jumpWithVirtLineDiags(1) end, { desc = "󰒕 Next diagnostic" })
-vim.keymap.set("n", "]d", function() jumpWithVirtLineDiags(-1) end, { desc = "󰒕 Prev diagnostic" })
+--    vim.keymap.set("n", "]d", function() vim.diagnostic.goto_next() end,
+--      vim.tbl_deep_extend("force", opts, { desc = "Next Diagnostic" }))
+--    vim.keymap.set("n", "[d", function() vim.diagnostic.goto_prev() end,
+--      vim.tbl_deep_extend("force", opts, { desc = "Previous Diagnostic" }))
+vim.keymap.set("n", "]d", function() jumpWithVirtLineDiags(1) end, { desc = "󰒕 Next diagnostic" })
+vim.keymap.set("n", "[d", function() jumpWithVirtLineDiags(-1) end, { desc = "󰒕 Prev diagnostic" })

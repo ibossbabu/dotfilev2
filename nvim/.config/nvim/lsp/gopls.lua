@@ -4,7 +4,6 @@ return {
   root_markers = {
     'go.mod',
     'go.sum',
-    '.git',
   },
   settings = {
     gopls = {
@@ -22,7 +21,6 @@ return {
         rangeVariableTypes = true,
       },
       staticcheck = true,
-      gofumpt = true,
       semanticTokens = true,
     },
   },

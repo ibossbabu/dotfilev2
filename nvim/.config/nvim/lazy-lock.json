@@ -3,8 +3,6 @@
   "dashboard-nvim": { "branch": "master", "commit": "000448d837f6e7a47f8f342f29526c4d7e49e9ce" },
   "friendly-snippets": { "branch": "main", "commit": "31f2a2657b6261724313281fe0d8ba6f43f4a4fa" },
   "fzf-lua": { "branch": "main", "commit": "970fc983b887cead7d630e062fed01337e41b25d" },
-  "guard-collection": { "branch": "main", "commit": "f4fb957960aa3de67092405d24768fcddfa63203" },
-  "guard.nvim": { "branch": "main", "commit": "f9467cc39d9816ba857dba8e0ea02a1557d194ff" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "mason-tool-installer.nvim": { "branch": "main", "commit": "1255518cb067e038a4755f5cb3e980f79b6ab89c" },
   "mason.nvim": { "branch": "main", "commit": "fc98833b6da5de5a9c5b1446ac541577059555be" },
