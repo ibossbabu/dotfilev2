@@ -11,7 +11,6 @@ return {
       require("mason").setup()
       require("mason-tool-installer").setup({
         ensure_installed = {
-          "clang-format",
           "clangd",
           "gopls",
           "delve",
