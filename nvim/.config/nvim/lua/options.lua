@@ -16,3 +16,5 @@ vim.opt.smartcase = true
 vim.opt.smartindent = true
 vim.opt.cursorline = true
 vim.opt.splitbelow = true
+--FOR WINDOWS
+--vim.opt.shell = "powershell.exe"
