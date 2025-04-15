@@ -28,4 +28,3 @@ return {
     vim.keymap.set("", "<leader>-", oil.toggle_float, {})
   end,
 }
-
