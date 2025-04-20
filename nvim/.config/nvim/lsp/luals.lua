@@ -5,14 +5,18 @@ return {
   settings = {
     Lua = {
       runtime = {
-        version = 'LuaJIT', },
-      diagnostics = {
-        globals = { "vim" }
+        version = 'LuaJIT',
       },
-      completion = {
-        callSnippet = 'Replace',
-        keywordSnippet = 'Disable',
-      }
+      diagnostics = {
+        globals = { "vim" },
+      },
+      workspace = {
+        library = vim.api.nvim_get_runtime_file("lua", true),
+        checkThirdParty = false,
+      },
+      telemetry = {
+        enable = false,
+      },
     }
   }
 }
