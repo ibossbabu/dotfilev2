@@ -13,7 +13,9 @@ vim.keymap.set("n", "x", '"_x', opts)
 -- Vertical scroll and center
 vim.keymap.set("n", "<C-d>", "<C-d>zz", opts)
 vim.keymap.set("n", "<C-u>", "<C-u>zz", opts)
-
+-- Quickfix
+vim.keymap.set("n", "<M-j>", "<cmd>:cnext<CR>", opts)
+vim.keymap.set("n", "<M-k>", "<cmd>:cprev<CR>", opts)
 -- Find and center
 vim.keymap.set("n", "n", "nzzzv", opts)
 vim.keymap.set("n", "N", "Nzzzv", opts)

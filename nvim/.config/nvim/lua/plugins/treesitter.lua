@@ -13,6 +13,7 @@ return {
         "lua",
         "json",
         "css",
+        "make",
         "jsonc",
         "markdown",
         "markdown_inline",

@@ -34,7 +34,7 @@ return {
         type = 'codelldb',
         request = 'launch',
         program = function()
-          return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/Projects/myc/', 'file')
+          return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/bin/', 'file')
         end,
         cwd = '${workspaceFolder}',
         stopOnEntry = false,
