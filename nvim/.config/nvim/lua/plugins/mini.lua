@@ -11,7 +11,6 @@ return {
         options = { try_as_border = true },
       })
       require('mini.icons').setup()
-      require('mini.ai').setup()
       require('mini.git').setup()
       require('mini.statusline').setup()
       require('mini.splitjoin').setup({
