@@ -2,6 +2,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 vim.keymap.set("i", "jk", "<ESC>", {})
+vim.keymap.set("n", "<leader>cl", ":nohl<CR>", {})
 
 vim.keymap.set("n", "<leader>l", ":Neotree filesystem reveal left<CR>", {})
 vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
