@@ -18,3 +18,12 @@ vim.opt.cursorline = true
 vim.opt.splitbelow = true
 --FOR WINDOWS
 --vim.opt.shell = "powershell.exe"
+vim.cmd [[
+  augroup ForceBlackBackground
+    autocmd!
+    autocmd ColorScheme * highlight Normal guibg=#000000 ctermbg=NONE
+  augroup END
+  set background=dark
+  colorscheme default
+  highlight Normal guibg=#000000 ctermbg=NONE
+]]
