@@ -22,5 +22,4 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.lsp.enable({ "gopls", "luals", "clangd" })
 vim.lsp.config("*", { root_markers = { ".git" }, })
-
 require "lazy_setup"
