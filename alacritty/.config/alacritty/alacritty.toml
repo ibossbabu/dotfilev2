@@ -1,37 +1,31 @@
 [font]
 # Normal font face
-normal = { family = "Hasklig", style = "Regular" }
+normal = { family = "BlexMono NerdFont", style = "Regular" }
 # Bold font face
-bold = { family = "Hasklig", style = "Bold" }
+bold = { family = "BlexMono NerdFont", style = "Bold" }
 # Italic font face
-italic = { family = "Hasklig", style = "Italic" }
+italic = { family = "BlexMono NerdFont", style = "Italic" }
 # Font size
-size = 8.5
+size = 12.5
 
 
-[colors.primary]
-background = '#000000'
-foreground = '#ffffff'
-
-# Normal colors
 [colors.normal]
-black   = '#222827'
-red     = '#d5a8e3'
-green   = '#9c75dd'
-yellow  = '#9898ae'
-blue    = '#654a96'
-magenta = '#625566'
-cyan    = '#a9d1df'
-white   = '#e6ebe5'
+black   = '#3F3F3F'
+red     = '#705050'
+green   = '#60B48A'
+yellow  = '#DFAF8F'
+blue    = '#9AB8D7'
+magenta = '#DC8CC3'
+cyan    = '#8CD0D3'
+white   = '#DCDCCC'
 
 # Bright colors
 [colors.bright]
-black   = '#5d6f74'
-red     = '#cd749c'
-green   = '#63b0b0'
-yellow  = '#c0c0dd'
-blue    = '#5786bc'
-magenta = '#3f3442'
-cyan    = '#849da2'
-white   = '#d9d6cf'
-
+black   = '#709080'
+red     = '#DCA3A3'
+green   = '#72D5A3'
+yellow  = '#F0DFAF'
+blue    = '#94BFF3'
+magenta = '#EC93D3'
+cyan    = '#93E0E3'
+white   = '#FFFFFF'
