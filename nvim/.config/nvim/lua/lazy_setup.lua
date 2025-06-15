@@ -9,4 +9,6 @@ require("lazy").setup({
   -- automatically check for plugin updates
   checker = { enabled = true },
 })
-vim.cmd("colorscheme boo")
+--vim.cmd("colorscheme boo")
+--vim.cmd("colorscheme duskfox")
+vim.cmd('colorscheme github_dark_high_contrast')
